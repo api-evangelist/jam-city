@@ -1,0 +1,80 @@
+generated: '2026-08-04'
+method: probed
+source: live HTTP probes of every Jam City host reachable from apis.yml
+note: >-
+  No /.well-known/ discovery document is published on any Jam City host. Recorded
+  as negative evidence so later rounds do not re-probe blindly. No WellKnown or
+  SecurityTxt pointer is wired in apis.yml because nothing was found — absence is
+  a valid, expected result for a consumer games publisher.
+hosts:
+- host: https://www.jamcity.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /api-docs
+    status: 404
+- host: https://support.jamcity.com
+  warning: >-
+    This host is a single-page-app catch-all — it answers HTTP 200 with the same
+    text/html shell for EVERY path, including paths that cannot exist. Every 200
+    below was verified to be that HTML shell, not a document, and is therefore
+    treated as a miss (the dominant false positive on well-known probes).
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 200
+    content_type: text/html
+    result: rejected-html-spa-catchall
+  - path: /openapi.json
+    status: 200
+    content_type: text/html
+    result: rejected-html-spa-catchall
+  - path: /swagger.json
+    status: 200
+    content_type: text/html
+    result: rejected-html-spa-catchall
+  - path: /api-docs
+    status: 200
+    content_type: text/html
+    result: rejected-html-spa-catchall
+unresolved_hosts:
+- api.jamcity.com
+- developer.jamcity.com
+- developers.jamcity.com
+- docs.jamcity.com
+- status.jamcity.com
+x-evidence:
+  fetched: '2026-08-04'
+  robots_txt: https://www.jamcity.com/robots.txt
+  sitemap: https://www.jamcity.com/sitemap.xml

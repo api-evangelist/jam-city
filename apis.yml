@@ -1,7 +1,18 @@
 aid: jam-city
 name: Jam City
-description: 'Jam City is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Jam City is a Culver City, California mobile entertainment company founded
+  in 2010 by MySpace co-founders Chris DeWolfe and Aber Whitcomb (with Josh Yguado),
+  now led by CEO Simon Sim. It develops and publishes free-to-play mobile games across
+  puzzle, casual and narrative RPG genres — including the Cookie Jam and Panda Pop
+  franchises and licensed titles such as Harry Potter: Hogwarts Mystery, Disney Emoji
+  Blitz and Family Guy: The Quest for Stuff — built with partners including Disney
+  and Warner Bros. Games. The company reports over $4 billion in aggregate lifetime
+  bookings and nearly 1.5 billion downloads across studios in Los Angeles, Burbank,
+  San Diego, San Francisco, Buenos Aires, Montevideo and Toronto. Jam City is a consumer
+  games publisher: it distributes through the Apple App Store and Google Play and,
+  as of this profile, publishes no public developer portal, API documentation, or
+  machine-readable API contract.'
+image: https://assets.jamcity.com/20210419054812/open_graph.jpg
 url: https://raw.githubusercontent.com/api-evangelist/jam-city/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,12 +23,50 @@ created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Games
+- Mobile Games
+- Gaming
+- Entertainment
+- Mobile Apps
+- Free To Play
+- Consumer
 apis: []
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/jam-city-domain-security.yml
+- type: LLMsTxt
+  url: llms/jam-city-llms.txt
 - type: Website
+  url: https://www.jamcity.com/
+- type: Blog
+  url: https://www.jamcity.com/news/
+- type: Support
+  url: https://www.jamcity.com/support
+- type: PrivacyPolicy
+  url: https://www.jamcity.com/privacyandterms
+- type: TermsOfService
+  url: https://www.jamcity.com/privacyandterms/?section=terms-of-service
+- type: Careers
+  url: https://www.jamcity.com/careers/
+- type: Press
+  url: https://www.jamcity.com/press
+- type: Products
+  url: https://www.jamcity.com/games
+- type: LinkedIn
+  url: https://www.linkedin.com/company/jam-city/
+- type: Twitter
+  url: https://twitter.com/JamCityHQ
+- type: YouTube
+  url: https://www.youtube.com/jamcity
+- type: SecondaryMarket
   url: https://forgeglobal.com/jam-city_stock/
