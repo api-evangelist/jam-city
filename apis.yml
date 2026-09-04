@@ -23,6 +23,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://assets.jamcity.com/20210419054812/open_graph.jpg
 url: https://raw.githubusercontent.com/api-evangelist/jam-city/refs/heads/main/apis.yml
 x-type: company
